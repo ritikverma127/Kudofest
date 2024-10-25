@@ -3,12 +3,12 @@ import { Data } from '../Photos';
 
 function GroupCards() {
   return (
-    <div className='flex flex-col items-start mt-16'>
-      <h1 className='text-6xl mb-8 text-center w-full'>Group Cards for Every Occasion</h1>
+    <div className='flex flex-col items-start mt-48'>
+      <h1 className='text-4xl md:text-6xl mb-8 text-center w-full'>Group Cards for Every Occasion</h1>
       
-      <div className='flex w-full max-w-full justify-start'>
-        {/* Photo Section: 50% width, wrapping items */}
-        <div className='flex flex-wrap w-1/2 justify-start gap-3 p-14'>
+      <div className='flex flex-col md:flex-row w-full max-w-full justify-start'>
+        {/* Photo Section: 100% width on small screens, 50% on medium and above */}
+        <div className='flex flex-wrap w-full md:w-1/2  gap-3 p-4 md:p-14 justify-center'>
           {Data.map(item => (
             <div key={item.id} className='flex flex-col items-center justify-center h-48 w-48 rounded-lg shadow-lg mb-5 overflow-hidden'>
               <img 
@@ -16,7 +16,7 @@ function GroupCards() {
                 alt={`Image ${item.id}`} 
                 className='h-32 w-32 object-cover' // Adjust size and cover
               />
-              <h1 className='mt-4'>{item.detail}</h1>
+              <h1 className='mt-4 text-center'>{item.detail}</h1>
             </div>
           ))}
           {/* Centered See More Button within the Photo Section */}
@@ -27,9 +27,9 @@ function GroupCards() {
           </div>
         </div>
 
-        {/* Text Section: 50% width, centered beside the photos */}
-        <div className='flex items-center justify-center w-1/2 text-center'>
-          <h2 className='text-4xl opacity-65'>
+        {/* Text Section: 100% width on small screens, 50% on medium and above */}
+        <div className='flex items-center justify-center w-full md:w-1/2 text-center'>
+          <h2 className='text-lg md:text-4xl opacity-65'>
             Group cards for team celebrations,<br/> birthdays, anniversaries, holidays, or<br/> any casual get-togethers or formal <br/>events.
           </h2>
         </div>
