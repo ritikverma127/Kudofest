@@ -16,7 +16,6 @@ function Navbars() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Close sidebar when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -33,14 +32,14 @@ function Navbars() {
     <div className='container mx-auto'>
       <div className="flex flex-col">
         <header className="p-10 lg:px-6 h-14 flex items-center">
-          {/* Logo */}
+          
           <div className='flex items-center'>
             <a className="flex items-center" href="#">
               <img src="Group 2.png" className='h-6 w-6 mb-1' alt="Logo" />
               <span className="font-bold text-2xl ml-2">UDOFEST</span>
             </a>
           </div>
-          {/* Centered Links */}
+          
           <nav className="mx-auto hidden md:flex gap-6 text-bold">
             {links.map((link) => (
               <a
@@ -52,7 +51,7 @@ function Navbars() {
               </a>
             ))}
           </nav>
-          {/* Right Buttons */}
+        
           <div className="hidden md:flex gap-4">
             <button className='bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-300'>
               <a href='#'>Login</a>
@@ -61,13 +60,13 @@ function Navbars() {
               <a href='#'>Sign up</a>
             </button>
           </div>
-          {/* Menu button for small screens */}
+         
           <button className="md:hidden ml-auto text-xl" onClick={toggleMenu}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </header>
       </div>
-      {/* Sidebar */}
+     
       {isMenuOpen && (
         <div className="fixed inset-0 z-30 bg-black bg-opacity-50" onClick={toggleMenu}>
           <div

@@ -18,8 +18,8 @@ function Section2() {
           with messages, images, GIFs, and videos.
         </p>
         
-        {/* Centering the button */}
-        <div className="flex justify-start mt-10 gap-10"> {/* Added flex container */}
+        
+        <div className="flex justify-start mt-10 gap-10"> 
           <button className='px-8 py-4 md:px-14 md:py-6 bg-gradient-to-r from-[#C7AFFE] to-[#E2BFFE] text-black rounded-xl hover:opacity-80 '>
             Get a Card
           </button>

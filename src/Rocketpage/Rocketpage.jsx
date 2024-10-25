@@ -35,15 +35,13 @@ function Rocketpage() {
                   </p>
                 </div>
               </div>
-              {/* Connecting lines */}
               <div className="absolute left-[17px] top-[0px] w-[2px] h-[calc(100%-80px)] bg-gray-400 z-0"></div>
          
  
           </div>
         </div>
-        {/* Rocket2 Component */}
         <div className='md:p-8 p-4'>
-          {/* <Rocket2 /> */}
+          
           <img src="timeline.png" alt="timeline-image" className='md:w-[600px] md:h-[500px] w-full h-full' />
         </div>
       </div>
